@@ -1,0 +1,57 @@
+<html>
+
+<head>
+	<title>PING PONG GAME</title>
+	<!--<meta http-equiv="refresh" content="1">-->
+	<style>
+		* {
+			margin:0;
+			padding:0;
+		}
+
+		#playarea1,#playarea2 {
+			border:0.5px solid white;
+			box-sizing:border-box;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="playarea" style="z-index:0;width:100%; height:100%; background-color:#7CC8F7; position:fixed; box-sizing:border-box;">
+
+	<div id="playarea1" style="height:100%; width:50%; box-sizing:border-box; float:left; position:fixed;">
+		<div id="platearea1" style="width:20px; height:100%; float:left;">
+			<div id="plate1" style="width:20px; height:100px; position:fixed; background-color:#2B2BAB; top:50%;"></div>
+		</div>
+		<div id="scorep1" style="color:black;position:fixed;background-color:rgba(255,255,255,0.4);
+		left:25%;padding:10px;border-radius:5px;font-size:20px;font-weight:bold;">0</div>
+	</div>
+
+
+
+	<div id="rounddisplay" style="color:black;left:50%;position:fixed;background-color:rgba(255,255,255,0.4);border-radius:5px;font-size:25px;font-weight:bold;padding:8px 32px;">Round Number : 1</div>
+
+
+
+
+	<div id="playarea2" style="height:100%; width:50%; box-sizing:border-box; float:right;">
+		<div id="platearea2" style="width:20px; height:100%; float:right;">
+			<div id="plate2" style="width:20px; height:100px; position:fixed; background-color:#2B2BAB; top:50%;"></div>
+		</div>
+		<div id="scorep2" style="color:black;position:fixed;background-color:rgba(255,255,255,0.4);
+		left:75%;padding:10px;border-radius:5px;font-size:20px;font-weight:bold;">0</div>
+	</div>
+
+
+	<div id="ballframe" style="border:0.5px solid white; top:50%; left:50%; border-radius:50%; height:50px; width:50px; position:fixed; box-sizing: border-box; background-color:#7CC8F7;"></div>
+	<!--#7AF564-->
+	<div id="ball" style="background-color:white;top:50%; left:50%; border-radius:50%; height:50px; width:50px; position:fixed;"></div>
+	
+</div>
+<div id="gamestatus" style="color:white;visibility:hidden;top:50%;left:50%;position:fixed;background-color:blue;border-radius:5px;font-size:30px;font-weight:bold;padding:16px 64px;text-align: center;"></div>
+
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
