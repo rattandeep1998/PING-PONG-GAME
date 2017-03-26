@@ -69,19 +69,19 @@ function moveplate(event) {
 		if(currentPlayer === 1)
 		{
 			if(event.which === 87  && upwardmovePossible(plate1,platearea1)) {
-				plate1.style.top = plate1Rect.top - 10 + "px";  //w
+				plate1.style.top = plate1Rect.top - 15 + "px";  //w
 			}
 			if(event.which === 83 && downwardmovePossible(plate1,platearea1)) {
-				plate1.style.top = plate1Rect.top + 10 + "px";  //s
+				plate1.style.top = plate1Rect.top + 15 + "px";  //s
 			}
 		}
 		if(currentPlayer === 2)
 		{
 			if(event.which === 38 && upwardmovePossible(plate2,platearea2)) {
-				plate2.style.top = plate2Rect.top - 10 + "px";  //up
+				plate2.style.top = plate2Rect.top - 15 + "px";  //up
 			}
 			if(event.which === 40 && downwardmovePossible(plate2,platearea2)) {
-				plate2.style.top = plate2Rect.top + 10 + "px";  //down
+				plate2.style.top = plate2Rect.top + 15 + "px";  //down
 			}
 		}
 	}
@@ -139,12 +139,12 @@ function moveball()
 		if(newleft<platearea1Rect.right)
 		{
 			newleft = platearea1Rect.right;
-			deltaX = deltaX * -1.05;
+			deltaX = deltaX * -1.30;
 		}
 		if(newleft+ballRect.width > platearea2Rect.left)
 		{
 			newleft = platearea2Rect.left-ballRect.width;
-			deltaX = deltaX * -1.05;	
+			deltaX = deltaX * -1.30;	
 		}
 
 		//var newtop1 = ballRect.top - deltaY + "px";
@@ -167,7 +167,7 @@ function roundOver() {
 	
 	if(ballRect.left <= plate1Rect.right)
 	{
-		if((ballRect.top+ballRect.height/2) >= plate1Rect.top-10 && (ballRect.top+ballRect.height/2) <= plate1Rect.bottom+10)
+		if((ballRect.top+ballRect.height/2) >= plate1Rect.top-15 && (ballRect.top+ballRect.height/2) <= plate1Rect.bottom+15)
 		{
 			currentPlayer = (currentPlayer === 1) ? 2 : 1; //Toggle Player
 			return 0;
@@ -179,7 +179,7 @@ function roundOver() {
 	}
 	if(ballRect.left + ballRect.width >= plate2Rect.left)
 	{
-		if((ballRect.top+ballRect.height/2) >= plate2Rect.top-10 && (ballRect.top+ballRect.height/2) <= plate2Rect.bottom+10)
+		if((ballRect.top+ballRect.height/2) >= plate2Rect.top-15 && (ballRect.top+ballRect.height/2) <= plate2Rect.bottom+15)
 		{
 			currentPlayer = (currentPlayer === 1) ? 2 : 1; //Toggle Player
 			return 0;
